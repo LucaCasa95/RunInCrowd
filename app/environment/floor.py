@@ -1,13 +1,13 @@
 import pyxel
-from game_config import WINDOW_HEIGHT, PLAYER_POS_Y, PLAYER_WIDTH, INITIAL_FLOOR_WIDTH, FLOOR_MARGIN
+from game_config import WINDOW_HEIGHT, INITIAL_FLOOR_WIDTH, FLOOR_HEIGHT
 
 class Floor:
     def __init__(self):
         self.first = True
         self.x_pos = 0
-        self.y_pos = PLAYER_POS_Y + PLAYER_WIDTH - FLOOR_MARGIN
+        self.y_pos = WINDOW_HEIGHT - FLOOR_HEIGHT
         self.rect_width = INITIAL_FLOOR_WIDTH
-        self.rect_height = WINDOW_HEIGHT - self.y_pos
+        self.rect_height = FLOOR_HEIGHT
 
     def update(self):
         pass
