@@ -12,18 +12,22 @@ class App:
     def update(self):
         UpdateObjects(self.background)
         UpdateObjects(self.player)
+        UpdateObjects(self.floor)
         pass
 
     def draw(self):
         cls(0)
         DrawObjects(self.background)
         DrawObjects(self.player)
+        DrawObjects(self.floor)
 
 def init_game(self):
     from environment.background import Background
     self.background = Background("assets/background.png", BACKGROUND_SCROLL_SPEED)
     from environment.player import Player
     self.player = Player("assets/player.png", PLAYER_TOTAL_FRAMES, PLAYER_WIDTH, PLAYER_POS_X, PLAYER_POS_Y)
+    from environment.floor import Floor
+    self.floor = Floor()
 
 if __name__ == "__main__":
     App()
